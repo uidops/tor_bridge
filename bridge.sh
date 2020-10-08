@@ -1,6 +1,12 @@
 echo "Welcome to torproject bridge {author: uidops}"
 echo
-url="https://bridges.torproject.org/bridges?transport=0"
+
+if [ $1 == 'obfs4' ]
+then
+	url="https://bridges.torproject.org/bridges?transport=obfs4"
+else
+	url="https://bridges.torproject.org/bridges?transport=0"
+fi
 get_request=$(curl -X GET -s $url)
 field=$(echo $get_request | tr " " "\n" | grep 'value=\"' | sed -e 's/value="/\ /;s/" /\ /')
 word='</input>'
