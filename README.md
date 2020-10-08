@@ -10,5 +10,11 @@ viu
 pup
 ```
 
+Usage:
+```
+./bridge.sh obfs4
+./bridge.sh none
+```
+
 Screenshot:
 <img src="https://github.com/siruidops/tor_bridge/raw/main/Screenshot_20201008_161540.png"></img>
