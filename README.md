@@ -6,7 +6,7 @@ tested on arch linux
 Dependencies:
 ```
 curl
-viu
+feh
 pup
 ```
 
@@ -17,4 +17,4 @@ Usage:
 ```
 
 Screenshot:
-<img src="https://github.com/siruidops/tor_bridge/raw/main/Screenshot_20201008_161540.png"></img>
+<img src="https://github.com/siruidops/tor_bridge/raw/main/screenshot.png"></img>
