@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo -e "Welcome to torproject bridge {author: uidops}"
 
@@ -50,5 +50,3 @@ read code
 post_request=$(curl -X POST -s $url -H "Content-Type: application/x-www-form-urlencoded" -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" -d "captcha_challenge_field=${key}&captcha_response_field=${code}&submit=submit")
 echo
 echo $post_request | pup 'div.bridge-lines text{}'
-
-
