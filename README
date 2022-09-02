@@ -1,0 +1,10 @@
+Dependencies:
+```
+curl
+feh
+```
+
+Usage:
+$ ./bridge.sh obfs4
+$ ./bridge.sh none
+```
