@@ -22,6 +22,8 @@ feh /tmp/torbridge.jpg & >/dev/null 2>&1
 
 printf "code: "
 read code
+rm -f /tmp/torbridge.txt /tmp/torbridge.jpg
+
 post_request=$(curl -X POST -s $url -H "Content-Type: application/x-www-form-urlencoded" -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" -d "captcha_challenge_field=${key}&captcha_response_field=${code}&submit=submit")
 
 if printf '%s' "${post_request}" | head -10 | grep 'click here' | grep 'bridges?' > /dev/null; then
