@@ -1,14 +1,14 @@
 #!/bin/sh
 
-echo -e "Welcome to torproject bridge {author: uidops}"
+printf "Torproject bridges "
 
 if [ "$1" = "obfs4"  ];
 then
     url="https://bridges.torproject.org/bridges?transport=obfs4"
-    echo -e "[type: obfs4]\n"
+    printf "[type: obfs4]\n"
 else
     url="https://bridges.torproject.org/bridges?transport=0"
-    echo -e "[type: none]\n"
+    printf "[type: none]\n"
 fi
 
 get_request=$(curl -X GET -s $url)
